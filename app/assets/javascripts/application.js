@@ -18,21 +18,24 @@
 
 function MenuEvents() {
   
-  var menu_collapse = $('#menu_bar').width()/parseFloat($("header").css("font-size"));
-  menu_collapse = menu_collapse - 0.8;
-  collapse_offset = "-" + menu_collapse + 'em';
+  var menu_width = $('#menu_bar').width()/parseFloat($("header").css("font-size"));
+  collapse_offset = menu_width - 0.8;
+  collapse_offset = "-" + collapse_offset + 'em';
 
   $('#menu_bar').css('margin-left', collapse_offset);
+  $('#circleBox').css('margin-left', '-1.6em')
 
   $('#menu-icon').click(function(){
 
     if($('#menu_bar').hasClass('collapsed'))
     {
       $('#menu_bar').css('margin-left', '0em');
+      $('#circleBox').css('margin-left', '-'+ menu_width + 'em')
     }
     else
     {
       $('#menu_bar').css('margin-left', collapse_offset);
+      $('#circleBox').css('margin-left', '-1.6em')
     }
 
     $("#menu_bar").toggleClass('collapsed');

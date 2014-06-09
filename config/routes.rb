@@ -1,5 +1,7 @@
 Thinventions::Application.routes.draw do
   
+  resources :projects
+
   resources :users
 
   controller :sessions do

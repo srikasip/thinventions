@@ -21,6 +21,40 @@
           border-radius: $radius;
 }
 
+div#circleBox
+{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  display:inline-block;
+  margin-top:.5em;
+}
+.circle
+{
+  @include border-radius(50%);
+  width:.7em;
+  height:.7em;
+  display:block;
+  margin-left:0.2em;
+  margin-right:0.2em;
+  float:left;
+}
+.greenBack
+{
+  background: rgba(46, 204, 113,1.0);
+}
+.sunflowerBack
+{
+  background:#f1c40f;
+}
+.darkBlueBack
+{
+  background:rgba(52, 73, 94,1.0);
+}
+.salmonBack
+{
+  background:rgba(228,91,60,1.0);
+}
 
 body, html{
   padding:0;
