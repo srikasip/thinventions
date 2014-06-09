@@ -1,0 +1,16 @@
+.page-background.login-background
+  .login-box
+    %h1="Login & Thinvent!"
+    = form_tag login_path do
+      .field
+        = label_tag :name, 'Username'
+        = text_field_tag :name, params[:name]
+      .field
+        = label_tag :password, "Password"
+        = password_field_tag :password
+      .actions
+        = submit_tag 'Login'
+      %br
+      %p
+        Not a member yet?
+        =link_to 'Sign up!', new_user_path

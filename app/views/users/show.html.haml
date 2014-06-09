@@ -1,0 +1,11 @@
+.page-background.login-background
+  .login-box
+    %p#notice= notice
+
+    %p
+      %b Name:
+      = @user.name
+
+    = link_to 'Edit', edit_user_path(@user)
+    \|
+    = link_to 'Back', root_path

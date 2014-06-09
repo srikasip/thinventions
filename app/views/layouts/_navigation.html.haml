@@ -1,0 +1,11 @@
+%div.nav.collapsed#menu_bar
+  %a#menu-icon
+    &#9776;
+  =link_to "home", root_path
+  -if signed_in?
+    =link_to "logout", logout_path, method: :delete
+  -else
+    =link_to "login", login_path
+    =link_to "signup", new_user_path
+  =link_to "browse", root_path
+  = render 'layouts/navigation_links'
