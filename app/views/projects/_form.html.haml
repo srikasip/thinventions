@@ -7,13 +7,10 @@
           %li= msg
 
   .field
-    = f.label :name
+    = f.label :name, "Name your awesome project!"
     = f.text_field :name
   .field
-    = f.label :user_id
-    = f.number_field :user_id
-  .field
-    = f.label :desc
+    = f.label :desc, "Describe your project!"
     = f.text_area :desc
   .actions
     = f.submit 'Save'

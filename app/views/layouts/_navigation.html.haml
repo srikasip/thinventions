@@ -9,6 +9,7 @@
     &#9776;
   =link_to "home", root_path
   -if signed_in?
+    =link_to "projects", projects_path
     =link_to "logout", logout_path, method: :delete
   -else
     =link_to "login", login_path
